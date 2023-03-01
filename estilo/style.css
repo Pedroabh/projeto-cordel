@@ -1,0 +1,108 @@
+@charset 'UTF-8 ';
+
+
+@import url('https://fonts.googleapis.com/css2?family= Passion +One & display=swap');
+
+@import
+url('https://fonts.googleapis.com/css2?family= Sriracha & display=swap');
+
+  :root { /*Criamos variáveis de fontes que vamos usar no site*/
+    --fonte1:  Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursiva;
+    --fonte3: 'Sriracha', cursiva;
+  }
+
+
+*{ /* usamos o '*' quando queremos dar um comando que vai ser utilizado em todo site*/
+    margin: 0px; 
+    padding: 0px;
+}
+
+html, body { 
+    min-height: 100vh; /*tamanho do corpo do site é 100 da altuta da view port */
+    background-color: darkgray; /* cor de fundo do site*/
+    font-family: var(--fonte1);
+}
+
+header { /* parte do cabeçalho do site*/
+    background-color: black;
+    color: white; /*cor da lentra branca*/
+    text-align: center; /* para centralizar o texto*/
+}
+
+header > h1 { /* h1 é o título que está dentro do cabeçalho do site*/
+    padding: 50px; /*é o preenchimento o espeço que queremos dar nesse caso é de 50 px*/
+    font-variant: small-caps; /* deixar a fonte em lentras maiúscula*/
+    font-family: var(--fonte2);
+    font-size: 10vw; /*estamos falando que o tamanho da fonte do h1 vai ser 10% do tamanho da tela, então, dependendo do tamanho da tela a letra vai mudando o tamanho*/
+}
+
+header > p { /*p é o paragráfo que está dentro do cabeçalho*/
+    padding-bottom: 50px; /*o espaço que para baixo que queremos deixar*/
+}
+
+header a, footer a { /*a tag 'a' é a tag do link seja ele externo ou interno neste caso estamos querendo trabalhar  os links que estão no cabeçalho 'header' e nos links que estão no rodapé dentro do */
+    color: white;
+    text-decoration: none; /*para tirar o sublinhado do texto*/
+    font-weight: bolder; /*deixar em negrito*/
+}
+
+header a:hover, footer a:hover { /* a teg footer é onde fica o rodapé do site*/
+    text-decoration: underline; /*para deixar o texto sublinhado*/
+}
+
+section { /*são as nossas seções que dentro delas colocamos os nossos parágrafos*/
+    padding-top: 10vh; /*esse 'padding top' é a altura encima*/
+    padding-bottom: 10vh;
+    line-height: 2em; /*para dar espaçamento entre uma linha em outra nesse caso usando o 'height' damos espaçamento de altura */
+    padding-left: 30px; /*para dar espeçamento do texto, afastando ele da lateral esquerda da tela*/
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
+}
+
+section > p { /*são os paragráfos que estão dentro das section*/
+    padding-bottom: 2em;
+}
+
+section.normal { /* nos criamos uma classe 'normal' dentro da nossa seção que fica no html, para diferenciar*/
+    background-color: white;
+    color: black;
+}
+
+section.imagem { /*nos criamos uma classe 'imagem' dentro da nossa seção que fica no html, para diferenciar*/
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);/*fazer um sobra interna*/
+}
+
+section.imagem > p { /* estamos falando que o paragráfo 'p' que esta dentro da classe 'imagem' e que esta dentro da secção 'section'*/
+    display: inline-block; /*faz uma caixa que de adpta ao tamanho do conteudo*/
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.514);
+    text-shadow: 1px 1px 0px black; /*usamos para dar sobra no texto nesta caso nas caixas*/ 
+    /*width: 400px; estamos diminundo o tamanho da section (como se fosse uma caixa)*/ 
+   
+}
+
+/*vamos usar imagens diferentes, por isso no arquivo html colocamos 'id = 01' e 'id = 02' para diferenciar uma da outra e para declaramos isso no css usamos '#' para falar que esmtamos falando de 'id'*/
+
+section#img01 { 
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center; /*estamos usando para centraliar a imagem a direita e pro centro da tela*/
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+section#img02 {
+    background-image: url(../imagens/background002.jpg);
+    background-size: cover; /*para deixar a imagem mais organizada*/
+    background-attachment: fixed; /*para fizar a imagem*/
+}
+
+footer { /*rodapé*/
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0px;
+}
